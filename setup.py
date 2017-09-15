@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='celery-s3',
-    version='0.1',
+    version='0.3',
     description='An S3 result store backend for Celery',
     long_description=open('README.md').read(),
     author='Rob Golding',
     author_email='rob@robgolding.com',
     license='BSD',
-    url='https://github.com/robgolding63/celery-s3',
-    download_url='https://github.com/robgolding63/celery-s3/downloads',
+    url='https://github.com/supericeboy/celery-s3',
+    download_url='https://github.com/supericeboy/celery-s3/downloads',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
