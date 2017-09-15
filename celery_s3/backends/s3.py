@@ -68,6 +68,6 @@ class S3Backend(KeyValueStoreBackend):
         conn = connect_to_region(self.aws_region,
                                  aws_access_key_id=self.aws_access_key_id,
                                  aws_secret_access_key=self.aws_secret_access_key,
-                                 is_secure=self.use_ssl,  # uncommmnt if you are not using ssl
-                                 calling_format=OrdinaryCallingFormat())
-        return Bucket(connection=conn, name=self.bucket_name)
+                                 calling_format=OrdinaryCallingFormat()
+                                 )
+        return conn.get_bucket(self.bucket_name)
